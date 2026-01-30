@@ -447,10 +447,6 @@ static void scara_homing_complete(bool success)
     // restore original kinematics functions
     kinematics.transform_from_cartesian = scara_transform_from_cartesian;
 
-    if (bit_istrue(machine.config, COUPLE_ON_HOMING_BIT)) {
-        // restore coupled motors
-        // ... TODO
-    }
 
     if(success) {
         // update work envelope
